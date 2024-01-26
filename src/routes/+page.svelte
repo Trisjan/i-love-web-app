@@ -1,5 +1,4 @@
 <script>
-    import { Fullsizetext, Logo } from "$lib/index";
     import { onMount } from "svelte";
     import { gsap } from "gsap";
 
@@ -29,15 +28,15 @@
 </section>
 
 <style>
-    section:first-child {
-        height: 100vh;
+    section {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     section:first-child h1 {
-
+        position: relative;
+        left: 60%;
     }
 
     section {
