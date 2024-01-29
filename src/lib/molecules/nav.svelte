@@ -138,7 +138,7 @@
         }
 
         li a:hover {
-            color: var(--secondary-dark-color);
+            color: var(--primary-accent-color);
         }
     }
 </style>

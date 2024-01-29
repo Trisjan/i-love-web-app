@@ -2,19 +2,27 @@
     export let Text;
     export let imgSrc;
     export let imgAlt;
+    export let smallText;
     import { onMount } from "svelte";
     import { gsap } from "gsap";
 
+
 	onMount(() => {
-		const tl = gsap.timeline();
 		const duration = 2;
 		
-		tl.from('#hero-text', {
+		gsap.from('#hero-text', {
 			duration,
 			opacity: 0,
             x: -700,
-            delay: 1,
+            delay: 0.5,
 		})
+
+        gsap.from('#small-text', {
+            duration,
+            opacity: 0,
+            x: 700,
+            delay: 1,
+        })
 
         gsap.from("#image-logo", {
         duration: 0.5,
@@ -26,7 +34,10 @@
 </script>
 
 <section>
-    <h1 id="hero-text">{Text}</h1>
+    <div>
+        <h1 id="hero-text">{Text}</h1>
+        <h4 id="small-text">{smallText}</h4>
+    </div>
     <img id="image-logo" src={imgSrc} alt={imgAlt}>
 </section>
 
@@ -36,19 +47,18 @@
         justify-content: center;
         align-items: center;
         min-height: 100dvh;
+        overflow-x: hidden;
     }
 
-    h1 {
+    div {
+        flex-direction: column;
+    }
+
+    h1 h2 {
         padding: 0 2rem;
     }
 
     img {
         display: none;
-    }
-
-    @media (min-width: 768px) {
-        section {
-
-        }
     }
 </style>
