@@ -7,16 +7,41 @@
     onMount(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to("h2", {
+        gsap.from("h2", {
             scrollTrigger: {
-                trigger: "section",
-                start: "top center",
-                end: "bottom 100px",
-                scrub: true,
+                trigger: "#section2",
+                start: "20% center",
+                end: "bottom center",
+                // scrub: true,
                 markers: true,
             },
+            opacity: 0,
+            x: -500,
+            duration: 2,
+        })
+
+        gsap.from("button", {
+            scrollTrigger: {
+                trigger: "#section2",
+                start: "20% center",
+                end: "bottom center",
+                // scrub: true,
+                markers: true,
+            },
+            opacity: 0,
+        })
+
+        gsap.from("img", {
+            scrollTrigger: {
+                trigger: "#section2",
+                start: "20% center",
+                end: "bottom center",
+                // scrub: true,
+                markers: true,
+            },
+            opacity: 0,
             x: 500,
-            duration: 3,
+            duration: 2,
         })
     })
 </script>
@@ -25,12 +50,15 @@
     Text="trisjan mustamu"
     smallText="frontend developer / designer"
     />
-<section>
+<section id="section2">
     <div>
         <h2>my work</h2>
         <button>Go to</button>
     </div>
     <img src={PrimaryWorkPhoto} alt="Logo">
+</section>
+<section>
+
 </section>
 
 <style>
