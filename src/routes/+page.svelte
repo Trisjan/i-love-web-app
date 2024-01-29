@@ -1,29 +1,11 @@
 <script>
-    import { onMount } from "svelte";
-    import { gsap } from "gsap";
-
-	onMount(() => {
-		const tl = gsap.timeline();
-		const duration = 2;
-		
-		tl.from('#hero-text', {
-			duration,
-			opacity: 0
-		})
-		.from('.box', {
-			duration,
-			xPercent: 100,
-			rotation: -90,
-			yPercent: 100,
-			ease: 'bounce.out',
-		}, `-=${duration * 0.75}`)
-	});
+    import { Hero } from "$lib";
 </script>
 
+<Hero
+    Text="Trisjan Mustamu"
+    />
 <section>
-    <h1 id="hero-text">Trisjan Mustamu</h1>
-</section>
-<section class="black">
 
 </section>
 
@@ -34,17 +16,12 @@
         align-items: center;
     }
 
-    section:first-child h1 {
-        position: relative;
-        left: 60%;
-    }
-
     section {
         height: 100vh;
     }
     
-    .black {
-        background-color: black;
+    section:nth-of-type(even) {
+        background-color: var(--secondary-dark-color);
     }
 
     /* // Medium devices (tablets, 768px and up) */
