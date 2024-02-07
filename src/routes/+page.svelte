@@ -16,8 +16,8 @@
                 markers: true,
             },
             opacity: 0,
-            x: -500,
             duration: 2,
+            delay: 0.8,
         })
 
         gsap.from("button", {
@@ -29,19 +29,33 @@
                 markers: true,
             },
             opacity: 0,
+            delay: 0.8,
         })
 
-        gsap.from("img", {
+        gsap.to("#workimg", {
             scrollTrigger: {
                 trigger: "#section2",
-                start: "20% center",
+                start: "top center",
                 end: "bottom center",
                 // scrub: true,
                 markers: true,
             },
-            opacity: 0,
-            x: 500,
-            duration: 2,
+            xPercent: 150,
+            duration: 1,
+            rotation: 8,
+        })
+
+        gsap.to("#workimg2", {
+            scrollTrigger: {
+                trigger: "#section2",
+                start: "top center",
+                end: "bottom center",
+                // scrub: true,
+                markers: true,
+            },
+            xPercent: -150,
+            duration: 1,
+            rotation: -8,
         })
     })
 </script>
@@ -55,7 +69,8 @@
         <h2>my work</h2>
         <button>Go to</button>
     </div>
-    <img src={PrimaryWorkPhoto} alt="Logo">
+    <img id="workimg" src={PrimaryWorkPhoto} alt="flowers">
+    <img id="workimg2" src={PrimaryWorkPhoto} alt="flowers">
 </section>
 <section>
 
@@ -98,6 +113,7 @@
         border-radius: 1rem;
         cursor: pointer;
         transition: all 0.5s ease-in-out;
+        text-transform: uppercase;
     }
 
     button:hover {
@@ -118,6 +134,16 @@
             width: 30%;
             object-fit: cover;
             filter: grayscale(100%);
+        }
+
+        #section2 {
+            position: relative;
+        }
+
+        #section2 > img {
+            position: absolute;
+            align-self: center;
+            text-align: center;
         }
     }
 </style>

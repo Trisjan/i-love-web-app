@@ -9,19 +9,20 @@
 
 	onMount(() => {
 		const duration = 2;
+        const delay = 0.5;
 		
 		gsap.from('#hero-text', {
 			duration,
 			opacity: 0,
             x: -700,
-            delay: 0.5,
+            delay,
 		})
 
         gsap.from('#small-text', {
             duration,
             opacity: 0,
             x: 700,
-            delay: 1,
+            delay,
         })
 
         gsap.from("#image-logo", {
@@ -61,4 +62,5 @@
     img {
         display: none;
     }
+
 </style>

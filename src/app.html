@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+		<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script> 
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
@@ -59,7 +60,7 @@ p {
 	font-size: calc(var(--font-size) / 1.5);
 }
 
-@media (min-width: 601px) {
+@media (min-width: 900px) {
 	h1 {
 		font-size: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-size));
 	}

@@ -66,6 +66,17 @@
         mix-blend-mode: difference;
     }
 
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--primary-dark-color);
+        transition: all 0.3s ease-in-out;
+    }
+
+    li a:hover {
+        color: var(--primary-accent-color);
+    }
+
     .nav-items {
         display: none;
         text-align: left;
@@ -91,6 +102,7 @@
 
     .menu-button {
         display: block;
+        cursor: pointer;
     }
 
     @media (min-width: 50.5em) {
@@ -128,17 +140,6 @@
         li {
             margin-left: 3rem;
             font-size: 1.25rem;
-        }
-
-        a {
-            text-decoration: none;
-            font-weight: bold;
-            color: var(--primary-dark-color);
-            transition: all 0.3s ease-in-out;
-        }
-
-        li a:hover {
-            color: var(--primary-accent-color);
         }
     }
 </style>

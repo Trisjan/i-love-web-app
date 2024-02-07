@@ -1,5 +1,22 @@
 <script>
     import { Nav } from "$lib/index.js";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    })
+    
 </script>
 
 <main>
