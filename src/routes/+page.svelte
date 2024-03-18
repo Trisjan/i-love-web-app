@@ -40,22 +40,9 @@
                 // scrub: true,
                 markers: true,
             },
-            xPercent: 150,
-            duration: 1,
-            rotation: 8,
-        })
-
-        gsap.to("#workimg2", {
-            scrollTrigger: {
-                trigger: "#section2",
-                start: "top center",
-                end: "bottom center",
-                // scrub: true,
-                markers: true,
-            },
             xPercent: -150,
             duration: 1,
-            rotation: -8,
+            rotation: 0,
         })
     })
 </script>
@@ -66,11 +53,38 @@
     />
 <section id="section2">
     <div>
-        <h2>my work</h2>
-        <button>Go to</button>
+        <h2>experience</h2>
     </div>
-    <img id="workimg" src={PrimaryWorkPhoto} alt="flowers">
-    <img id="workimg2" src={PrimaryWorkPhoto} alt="flowers">
+    <div class="jobs">
+        <div>
+            <h3>Albert Heijn</h3>
+            <p class="title">Parttime</p>
+            <p class="description">Een logistiek medewerker die de goederenstromen binnen een supermarkt coördineert, 
+                klanten ondersteunt en adviseert op basis van hun eerdere koopgedrag.</p>
+            <p class="date">feb. 2022 - heden</p>
+        </div>
+        <div>
+            <h3>Alphabet</h3>
+            <p class="title">Parttime</p>
+            <p class="description">Auto ophaal- en leveringsprofessional heb ik auto's getransporteerd naar zowel particulieren als bedrijven. Bij deze
+                service hoort ook het reinigen van de auto en deze vlekkeloos te leveren aan de klant.</p>
+            <p class="date">feb. 2017 - heden</p>
+        </div>
+        <div>
+            <h3>Use IT B.V.</h3>
+            <p class="title">Stage</p>
+            <p class="description">Servicedesk medewerker</p>
+            <p class="date">feb. 2020 - jun. 2020</p>
+        </div>
+        <div>
+            <h3>NDI ICT Solutions</h3>
+            <p class="title">Stage</p>
+            <p class="description">Ik heb met name mee gedaan aan het uitvoeren van projecten bij de klanten van dit bedrijf. 
+                Hier bij heb ik allerlei netwerken aangelegd en contact gehad met de klanten. 
+                Ik ben met name naar locaties geweest als Rotterdam (Delftse Poort), Den Haag (Babylon) etc.</p>
+            <p class="date">aug. 2018 - feb. 2019</p>
+        </div>
+    </div>
 </section>
 <section>
 
@@ -86,40 +100,36 @@
     }
 
     section {
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
     }
     
     section:nth-of-type(even) {
-        background-color: var(--secondary-dark-color);
+        background-color: var(--secondary-light-color);
     }
 
-    /* section > h2{
-    } */
-
-    section > img {
-        max-width: 20%;
-        object-fit: cover;
-        filter: grayscale(100%);
+    #section2 {
+        flex-direction: column;
+        gap: 0;
+        padding: 5rem 5rem;
     }
 
-    button {
-        background-color: var(--primary-dark-color);
-        color: var(--default-light);
-        border: none;
-        font-size: 1rem;
-        width: 8rem;
-        height: 3rem;
-        border-radius: 1rem;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-        text-transform: uppercase;
+    #section2 .jobs div {
+        min-height: 33vh;
     }
 
-    button:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 0px 35px -7px rgba(0,0,0,0.9);
-        font-weight: bold;
+    #section2 .jobs div .title {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    #section2 .jobs div .description {
+        max-width: 70%;
+    }
+
+    #section2 .jobs div .date {
+        font-weight: 400;
+        font-size: 0.9rem;
     }
 
     /* // Large devices (desktops, 992px and up) */
@@ -130,20 +140,8 @@
             align-items: center;
         }
 
-        section > img {
-            width: 30%;
-            object-fit: cover;
-            filter: grayscale(100%);
-        }
-
         #section2 {
             position: relative;
-        }
-
-        #section2 > img {
-            position: absolute;
-            align-self: center;
-            text-align: center;
         }
     }
 </style>
