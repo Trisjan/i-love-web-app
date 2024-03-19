@@ -30,8 +30,8 @@
     denkt sveltekit dat hij niet gebruikt wordt waardoor hij door treeshaking niet wordt meegenomen bij de live result. Door er een variabele mee te geven
     die standaard op false staat krijgt hij de class mee maar is hij false dus staat hij standaard niet aan.-->     
     <ul class="nav-items" class:active={notActive}>
-        <li><a href="/blog">we love web</a></li>
-        <li><a href="about">about</a></li>
+        <!-- <li><a href="/blog">we love web</a></li> -->
+        <!-- <li><a href="about">about</a></li> -->
         <li><a href="/contact">contact</a></li>
     </ul>
     <div class="menu-button" class:open={notActive}>
