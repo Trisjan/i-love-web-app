@@ -32,7 +32,7 @@
     <ul class="nav-items" class:active={notActive}>
         <!-- <li><a href="/blog">we love web</a></li> -->
         <!-- <li><a href="about">about</a></li> -->
-        <li><a href="/contact">contact</a></li>
+        <li><a href="/">contact</a></li>
     </ul>
     <div class="menu-button" class:open={notActive}>
         <svg width="3.5rem" height="3.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
